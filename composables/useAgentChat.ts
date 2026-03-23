@@ -126,7 +126,7 @@ export function useAgentChat() {
                 const queryUrl = `${gatewayUrl}/api/agents/${orgId}/${agentId}/query`;
                 const response = await $fetch<{ output: any; session_id: string | null }>(
                     queryUrl,
-                    { method: 'POST', headers: reqHeaders, body: reqBody },
+                    { method: 'POST', headers: reqHeaders, body: reqBody }
                 );
 
                 if (response.session_id) sessionId.value = response.session_id;
